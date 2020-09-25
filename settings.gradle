@@ -1,0 +1,1 @@
+include ':full-video-player', ':spyglass', ':ucrop', ':nocropper', ':CropperPicker', ':matisse', ':video-trimmer', ':toro', ':photoeditorsdk', ':pager_indicator', ':SegmentedProgress', ':instagramapi', ':slidingactivity', ':camerakit-core', ':camerakit-vision', ':camerakit'

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<color name="dot_fill">#EEFFFFFF</color>
+
+	<color name="dot_stroke">#996e6e6e</color>
+
+</resources>

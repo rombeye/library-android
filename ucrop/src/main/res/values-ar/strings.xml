@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ucrop_MEDIA_GALLERY_CROP_TITLE">تحريك وتغيير مقاس الصورة</string>
+    <string name="ucrop_com_facebook_loginview_cancel_action">إلغاء</string>
+    <string name="ucrop_crop_image">قص الصورة</string>
+    <string name="ucrop_label_edit_photo">تعديل الصورة</string>
+    <string name="ucrop_label_original">الأساسية</string>
+    <string name="ucrop_menu_crop">قص</string>
+
+
+</resources>

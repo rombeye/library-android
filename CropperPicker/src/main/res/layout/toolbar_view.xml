@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.alphaapps.instapickercropper.CustomTextView
+        android:id="@+id/mIconBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
+        android:text="@string/icon_back_md"
+        android:textColor="#3A3A3A"
+        android:textSize="24sp"
+        app:font_name="bold" />
+
+    <com.alphaapps.instapickercropper.CustomTextView
+        android:id="@+id/mTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:layout_toEndOf="@id/mIconBack"
+        android:layout_toRightOf="@id/mIconBack"
+        android:paddingBottom="16dp"
+        android:text="ImagePicker"
+        android:textColor="@color/dark_chocolate"
+        android:textSize="20sp"
+        app:font_name="regular" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+
+        <com.alphaapps.instapickercropper.CustomTextView
+            android:id="@+id/mIconNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@string/bt_next"
+            android:textColor="@color/green"
+            android:textSize="@dimen/x_large_font"
+            app:font_name="regular" />
+
+    </LinearLayout>
+
+</merge>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="16dp"
+        android:minHeight="150dp"
+        app:layout_collapseMode="parallax">
+
+        <FrameLayout
+            android:id="@+id/cropperContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_rounded_image" />
+
+        <!--<include layout="@layout/cropper_default_layout" />-->
+
+        <ImageView
+            android:id="@+id/free_aspect_ratio"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="bottom|start"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:padding="8dp"
+            android:src="@drawable/expand_image"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:id="@+id/remove_imgIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:padding="16dp"
+            android:src="@drawable/ic_remove_img" />
+
+        <ImageView
+            android:id="@+id/expand_collapseIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:padding="16dp"
+            android:src="@drawable/ic_expand" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mediaThumbnailsRV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:layout_margin="8dp"
+            android:orientation="horizontal"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+    </FrameLayout>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/maintoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_collapseMode="pin">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:layout_collapseMode="pin">
+
+            <TextView
+                android:id="@+id/backTV"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/text_post_back"
+                android:textAlignment="center"
+                android:textColor="#CC222233"
+                android:textSize="16sp" />
+
+            <FrameLayout
+                android:id="@+id/albumsAnchorFL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="46dp"
+                android:layout_marginTop="24dp" />
+
+            <com.alphaapps.instapickercropper.CustomTextView
+                android:id="@+id/albumNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:drawablePadding="14dp"
+                android:gravity="center"
+                android:text="Mila Anderson-Groom"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/large_font"
+                app:font_name="bold" />
+
+            <TextView
+                android:id="@+id/nextTV"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/text_post_next"
+                android:textAlignment="center"
+                android:textColor="@color/blue"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/openCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:src="@drawable/ic_black_camera" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+</merge>

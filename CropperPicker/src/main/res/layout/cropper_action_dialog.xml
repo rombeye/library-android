@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/contentLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/dots_view" />
+
+        <LinearLayout
+            android:id="@+id/messageLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.alphaapps.instapickercropper.CustomTextView
+                android:id="@+id/messageTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical"
+                android:paddingEnd="32dp"
+                android:paddingStart="32dp"
+                android:text="this is message"
+                android:textColor="@color/new_black"
+                android:textSize="@dimen/x_large_font"
+                app:font_name="regular" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:background="#F8F7F9" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/bottom_lib_listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="#F8F7F9"
+            android:dividerHeight="1dp"
+            tools:listitem="@layout/cropper_action_dialog_item" />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,137 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.3.10'
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url 'https://maven.fabric.io/public'
+        }
+        maven { url 'https://github.com/leonardocardoso/mvn-repo/raw/master/maven-deploy' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.0'
+        classpath 'com.google.gms:google-services:4.1.0' // google-services plugin
+
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.1'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+        classpath 'com.novoda:bintray-release:0.8.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'kotlin'
+
+project.ext {
+    releaseRepoName = 'Toro'
+    releaseUserOrg = 'eneimlabs'
+    releaseGroupId = 'im.ene.toro3'
+    releaseVersion = '3.2.0-A1'
+    releaseVersionCode = 320
+}
+project.ext {
+    releaseRepoName = 'CameraKit'
+    releaseUserOrg = 'wonderkiln'
+    releaseGroupId = 'com.wonderkiln'
+    releaseVersion = '0.13.0'
+    releaseVersionCode = 320
+}
+
+ext {
+    androidVersion = 28
+    buildToolsVersion ='27.0.3'
+    supportLibraryVersion = '26.1.0'
+    exoPlayer2Version = '2.6.0'
+    minSupportSDKVersion = 21
+}
+
+allprojects {
+    ext.versions = [
+            // android
+            sdk                : [
+                    'min'   : 19,
+                    'target': 26
+            ],
+            buildTools         : '27.0.3',
+
+            // main
+            support            : '26.1.0',
+            spannable          : '0.8',
+            utils              : '0.13',
+            picassoCommons     : '0.12.0',
+
+            // test
+            runner             : '0.5',
+            rules              : '0.5',
+            espresso           : '2.2.2',
+            junit              : '4.12',
+
+            release            : '0.14.0',
+            minSdk             : 21,
+            compileSdk         : 27,
+            publishVersion     : '0.3.0',
+            publishVersionCode : 15,
+            gradlePlugin       : '2.3.2',
+            spotlessPlugin     : '3.4.0',
+            supportLib         : '26.0.0',
+            materialDialogs    : '0.9.4.3',
+            materialProgressBar: '1.1.7'
+    ]
+    repositories {
+        google()
+        maven { url "https://maven.google.com" }
+        jcenter()
+        mavenCentral()
+        maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local/' }
+        maven { url "https://jitpack.io" }
+        maven { url 'https://dl.bintray.com/sayyam/maven' }
+
+        maven { url 'https://dl.bintray.com/drummer-aidan/maven' }
+        maven { url 'https://dl.google.com/dl/android/maven2/' }
+        maven { url 'https://github.com/leonardocardoso/mvn-repo/raw/master/maven-deploy' }
+
+        flatDir {
+            dirs 'libs'
+        }
+    }
+    project.ext {
+        releaseRepoName = 'Toro'
+        releaseUserOrg = 'eneimlabs'
+        releaseGroupId = 'im.ene.toro3'
+        releaseVersion = '3.1.0'
+        releaseWebsite = 'https://github.com/eneim/toro'
+        releaseLicense = ['Apache-2.0']
+    }
+    project.ext {
+        releaseRepoName = 'CameraKit'
+        releaseUserOrg = 'wonderkiln'
+        releaseGroupId = 'com.wonderkiln'
+        releaseVersion = '0.13.0'
+        releaseWebsite = 'https://github.com/wonderkiln/CameraKit-Android.git'
+        releaseLicense = ['Apache-2.0']
+    }
+}
+//
+//task clean(type: Delete) {
+//    delete rootProject.buildDir
+//}
+repositories {
+    mavenCentral()
+}
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+}
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}

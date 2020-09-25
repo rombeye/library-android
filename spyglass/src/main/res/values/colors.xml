@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--new colors-->
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorPrimaryDarkV21">#FFFFFF</color>
+    <color name="colorAccent">#BC9760</color>
+    <color name="lightGray">#F5F4F4</color>
+    <color name="turquoise">#437C90</color>
+    <color name="gray">#CAC6C6</color>
+    <color name="darkGray">#1E1F24</color>
+    <color name="red">#C62B2F</color>
+    <color name="black">#3A3A3A</color>
+    <color name="light_black">#3A3A3A </color>
+
+    <!--DELETE COLORS-->
+    <color name="login_black">#312F2F</color>
+    <color name="progressBarColor">@color/turquoise</color>
+
+    <color name="white">#ffffff</color>
+</resources>

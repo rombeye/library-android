@@ -1,0 +1,69 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jfrog.bintray'
+
+version = "0.2.0"
+group = "com.fenchtose.nocropper"
+
+def siteUrl = "https://github.com/jayrambhia/CropperNoCropper"
+def gitUrl = "https://github.com/jayrambhia/CropperNoCropper.git"
+
+android {
+    resourcePrefix "nocropper__"
+    compileSdkVersion rootProject.ext.androidVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSupportSDKVersion
+        targetSdkVersion rootProject.ext.androidVersion
+        versionCode 1
+        versionName version
+    }
+    buildTypes {
+    }
+}
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+bintray {
+    user = properties.getProperty("bintray.user")
+    key = properties.getProperty("bintray.apiKey")
+
+    configurations = ['archives']
+    pkg {
+        repo = "maven"
+        name = "NoCropper"
+        websiteUrl = siteUrl
+        vcsUrl = gitUrl
+        licenses = ["Apache-2.0"]
+        publish = true
+    }
+}
+
+dependencies {
+
+}
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+
+task findConventions {
+    doLast {
+        println project.getConvention()
+    }
+}

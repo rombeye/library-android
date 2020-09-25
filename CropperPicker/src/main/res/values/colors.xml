@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2017 Zhihu Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources>
+
+    <color name="preview_bottom_toolbar_bg">#CC000000</color>
+    <color name="preview_bottom_size">#61FFFFFF</color>
+    <color name="login_black">#312F2F</color>
+
+    <color name="colorPrimary">@color/dark_chocolate</color>
+    <color name="colorPrimaryDark">@color/dark_chocolate</color>
+    <color name="colorAccent">@color/dark_chocolate</color>
+
+    <color name="green">#A8B32C</color>
+    <color name="dark_chocolate">#2E2B25</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="progressBarColor">@color/turquoise</color>
+    <color name="lightGray">#F5F4F4</color>
+    <color name="new_black">#222233</color>
+    <color name="red">#F71735</color>
+    <color name="new_interaction_number">#B2222233</color>
+    <color name="blue">#3469FA</color>
+
+</resources>
