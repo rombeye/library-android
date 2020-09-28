@@ -27,5 +27,4 @@ dependencies {
     })
     implementation "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
     implementation 'com.github.florent37:viewanimator:1.0.5'
-//    androidTestImplementation 'junit:junit:4.12'
 }
