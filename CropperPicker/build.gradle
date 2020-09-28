@@ -39,9 +39,10 @@ ext.supportLibVersion = '26.1.0'
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation("com.google.android.exoplayer:exoplayer-ui:${rootProject.ext.exoPlayer2Version}") {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    }
+    implementation project(':exoplayer-library-dash')
+    implementation project(':exoplayer-library-hls')
+    implementation project(':exoplayer-library-smoothstreaming')
+    implementation project(':exoplayer-library-ui')
     implementation 'id.zelory:compressor:2.1.0'
     implementation "com.android.support:support-v4:$rootProject.ext.supportLibraryVersion"
     implementation "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
@@ -55,7 +56,6 @@ dependencies {
 //    implementation 'com.fenchtose.nocropper:nocropper:0.2.0'
     implementation 'jp.wasabeef:glide-transformations:2.0.2'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
-    implementation 'com.google.android.exoplayer:exoplayer-hls:r2.5.4'
     implementation 'com.writingminds:FFmpegAndroid:0.3.2'
     implementation project(':ucrop')
     implementation 'com.google.code.gson:gson:2.8.2'

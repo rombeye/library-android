@@ -24,8 +24,6 @@ android {
     targetSdkVersion rootProject.ext.androidVersion
     versionCode releaseVersionCode
     versionName "v" + releaseVersion
-
-//    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     buildConfigField("String", "LIB_NAME", "\"" + "ToroLib, v" + releaseVersion + "\"")
   }
 
@@ -44,16 +42,13 @@ android {
 
 dependencies {
   implementation fileTree(dir: 'libs', include: ['*.jar'])
-//  testImplementation 'junit:junit:4.12'
-//  androidTestImplementation 'com.android.support.test:runner:1.0.1'
-//  androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-
   implementation "com.android.support:recyclerview-v7:${rootProject.ext.supportLibraryVersion}"
   implementation "com.android.support:support-annotations:${rootProject.ext.supportLibraryVersion}"
+  implementation project(':exoplayer-library-dash')
+  implementation project(':exoplayer-library-hls')
+  implementation project(':exoplayer-library-smoothstreaming')
+  implementation project(':exoplayer-library-ui')
 
-  implementation ("com.google.android.exoplayer:exoplayer:${rootProject.ext.exoPlayer2Version}") {
-    exclude group: 'com.android.support'
-  }
 }
 
 ext {

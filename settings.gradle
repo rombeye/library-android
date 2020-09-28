@@ -1,1 +1,21 @@
-include ':full-video-player', ':spyglass', ':ucrop', ':nocropper', ':CropperPicker', ':matisse', ':video-trimmer', ':toro', ':photoeditorsdk', ':pager_indicator', ':SegmentedProgress', ':instagramapi', ':slidingactivity', ':camerakit-core', ':camerakit-vision', ':camerakit'
+include ':full-video-player',
+        ':spyglass',
+        ':ucrop',
+        ':nocropper',
+        ':CropperPicker',
+        ':matisse',
+        ':video-trimmer',
+        ':toro',
+        ':photoeditorsdk',
+        ':pager_indicator',
+        ':SegmentedProgress',
+        ':instagramapi',
+        ':slidingactivity',
+        ':camerakit-core',
+        ':camerakit-vision',
+        ':camerakit',
+        ':pinentryedittext'
+
+gradle.ext.exoplayerRoot = 'ExoPlayer'
+gradle.ext.exoplayerModulePrefix = 'exoplayer-'
+apply from: new File(gradle.ext.exoplayerRoot, 'core_settings.gradle')
