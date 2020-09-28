@@ -14,7 +14,8 @@ include ':full-video-player',
         ':camerakit-core',
         ':camerakit-vision',
         ':camerakit',
-        ':pinentryedittext'
+        ':pinentryedittext',
+        ':ExoPlayer'
 
 gradle.ext.exoplayerRoot = 'ExoPlayer'
 gradle.ext.exoplayerModulePrefix = 'exoplayer-'
